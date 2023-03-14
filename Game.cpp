@@ -10,6 +10,9 @@ Game::Game()
     this->canEnemyMove = false;
     this->player_score = 0;
     this->enemy_score = 0;
+    this->burpsound = nullptr;
+    this->death = nullptr;
+    this->bounce = nullptr;
 }
 
 bool Game::Initialize()
@@ -61,20 +64,20 @@ bool Game::Initialize()
 
     Mix_Volume(-1,MIX_MAX_VOLUME);
    
-    burpsound = Mix_LoadWAV("./assets/music/jumper.wav"); //jump sound
-    bounce = Mix_LoadWAV("./assets/music/bounce.wav");    //bounce sound
-    death = Mix_LoadWAV("./assets/music/death.wav");      //death sound
+    this->burpsound = Mix_LoadWAV("./assets/music/jumper.wav"); //jump sound
+    this->bounce = Mix_LoadWAV("./assets/music/bounce.wav");    //bounce sound
+    this->death = Mix_LoadWAV("./assets/music/death.wav");      //death sound
 
    
-    if(burpsound == nullptr){
+    if(this->burpsound == nullptr){
         std::cout << "Error in loading the music :: " << Mix_GetError() << std::endl; 
     }
 
-    if(bounce == nullptr){
+    if(this->bounce == nullptr){
         std::cout << "Error in loading the music :: " << Mix_GetError() << std::endl; 
     }
 
-     if(death == nullptr){
+     if(this->death == nullptr){
         std::cout << "Error in loading the music :: " << Mix_GetError() << std::endl; 
     }
 

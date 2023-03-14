@@ -26,7 +26,7 @@ class Game
         void ProcessInput();
         void UpdateGame();
         void GenerateOutput();
-        
+
         SDL_Window* window;
         SDL_Renderer* renderer;
         TTF_Font* font;
