@@ -52,4 +52,3 @@ class Game
 
 #endif // __GAME_H__
 
-// g++ main.cpp Game.hpp Game.cpp -lSDL2 -lSDL2_ttf -o game && ./game
