@@ -95,17 +95,17 @@ bool Game::Initialize()
 
 void Game::ShutDown()
 {
-    SDL_DestroyWindow(window);
-    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(this->window);
+    SDL_DestroyRenderer(this->renderer);
     
-    TTF_CloseFont(font);
+    TTF_CloseFont(this->font);
 
-    Mix_FreeChunk(burpsound);
-    Mix_FreeChunk(bounce);
-    Mix_FreeChunk(death);
-    death = nullptr;
-    bounce = nullptr;
-    burpsound = nullptr;
+    Mix_FreeChunk(this->burpsound);
+    Mix_FreeChunk(this->bounce);
+    Mix_FreeChunk(this->death);
+    this->death = nullptr;
+    this->bounce = nullptr;
+    this->burpsound = nullptr;
     Mix_CloseAudio();
 
     SDL_Quit();
